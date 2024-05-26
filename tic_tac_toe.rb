@@ -37,10 +37,11 @@ class NewGame
        ((game_board[0]==player.choice && game_board[4]==player.choice && game_board[8]==player.choice)) ||
        ((game_board[2]==player.choice && game_board[4]==player.choice && game_board[6]==player.choice)) 
 
-        puts ""
+        puts " "
         print_board()
-        puts ""
+        puts " "
         puts "#{player.name} wins this round!"
+        puts " "
         player.score += 1
         inner_loop_counter = 1
     elsif (round==8)
@@ -171,10 +172,19 @@ this_round.game_rounds(player_one, player_two)
 
 if (game_round==(game_rounds-1))
   if (player_one.score > player_two.score)
+    puts " "
+    puts "#{player_one.name} - #{player_one.score}"
+    puts "#{player_two.name} - #{player_two.score}"
     puts "#{player_one.name} wins the match! Congratulations!"
   elsif (player_two.score > player_one.score)
+    puts " "
+    puts "#{player_one.name} - #{player_one.score}"
+    puts "#{player_two.name} - #{player_two.score}"
     puts "#{player_two.name} wins the match! Congratulations!"
   elsif (player_one.score==player_two.score)
+    puts " "
+    puts "#{player_one.name} - #{player_one.score}"
+    puts "#{player_two.name} - #{player_two.score}"
     puts "It's a tie at #{player_one.score} each! Better luck next time ;)"
   end
 end
